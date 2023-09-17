@@ -23,7 +23,7 @@ import MediaSlide from '../components/media/MediaSlide';
 import favoriteRequests from '../axios/modules/favoriteRequests';
 import { setAuthModalOpen } from '../redux/features/authModalSlice';
 import { addFavorite, removeFavorite } from '../redux/features/userSlice';
-import { setAppState } from '../redux/features/appStateSlice';
+
 const MediaDetail = () => {
   const theme = useTheme();
   const { mediaType, mediaId } = useParams();

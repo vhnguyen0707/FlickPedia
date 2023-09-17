@@ -1,9 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useState, useEffect } from 'react';
 import Container from '../components/common/Container';
 import uiConfigs from '../configs/uiConfigs';
-import { Toolbar, Box, Grid } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import MediaItem from '../components/media/MediaItem';
 
 const FavoriteList = () => {

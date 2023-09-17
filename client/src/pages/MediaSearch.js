@@ -29,7 +29,7 @@ const MediaSearch = () => {
 
     if (data) {
       if (page===1) setMedias(data.results);
-      else setMedias([...medias, ...data.results]);
+      else setMedias(prev => [...prev, ...data.results]);
     }
 
     if (err) toast.error(err.message);
