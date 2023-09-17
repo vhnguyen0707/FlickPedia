@@ -1,5 +1,5 @@
 import uiConfigs from '../configs/uiConfigs'
-import { Button, Stack, Toolbar, Box, TextField, Grid, Typography } from '@mui/material';
+import { Button, Stack, Toolbar, Box, TextField, Grid, Typography, useTheme } from '@mui/material';
 import { useState, useEffect, useCallback} from 'react';
 import mediaRequests from '../axios/modules/mediaRequests';
 import { toast } from 'react-toastify';
@@ -12,6 +12,7 @@ const mediaTypes = ['movie', 'tv', 'people'];
 let timer;
 const delay = 500;
 const MediaSearch = () => {
+  const theme = useTheme();
   const [currMedia, setCurrMedia] = useState(mediaTypes[0]);
   const [query, setQuery] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +73,10 @@ const MediaSearch = () => {
               <Button
                 variant= {media===currMedia ? 'contained' : 'outlined'}
                 key={media}
-                sx={{flex: 1, color: 'primary.contrastText', border: 'none',
+                sx={{
+                  flex: 1, 
+                  color: (theme === 'dark') || (media === currMedia) ? 'primary.contrastText' :'text.primary', 
+                  border: 'none',
                   '&:hover': {border: 'none'}
                 }}
                 onClick={()=>handleSwitchCurrMedia(media)}

@@ -37,7 +37,7 @@ const MediaSwiper = ({ children, slidesPerView }) => {
     }}
       >
          <Swiper
-          slidesPerView={slidesPerView ? 3 : 1}
+          slidesPerView={slidesPerView ? slidesPerView : 1}
           // slidesPerGroup={slidesPerView ? 3 : 1}
           spaceBetween={10}
           grabCursor={true}

@@ -45,7 +45,7 @@ const HeroSlider = ({ mediaType, mediaCategory}) => {
     }
     getGenres();
   }, [mediaType, mediaCategory, dispatch]);
-  
+
     return (
     <Box sx={{
         position: 'relative',
@@ -124,7 +124,7 @@ const HeroSlider = ({ mediaType, mediaCategory}) => {
                         ...uiConfigs.style.typoLines(2, "left")
                       }}
                     >
-                      {movie.title}
+                      {movie.title || movie.name || movie.original_name}
                     </Typography>
                     <Stack direction="row" spacing={1} alignItems="center">
                       <MediaRate value={movie.vote_average} />
