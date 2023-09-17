@@ -16,14 +16,13 @@ const Video = ({video}) => {
     }, [video])
 
     return (
-        // <iframe width="560" height="315" src="https://www.youtube.com/embed/wkA8B8PiRxI?si=5wBVXQkwRXMLYC1q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <iframe 
             src={video ? tmdbConfig.trailerSrc(video.key) : ''}
             ref={iframeRef}
             title={video ? video.name: ''}
             width="100%"
             style={{border: 0}}
-            // loading='lazy'
+            loading='lazy'
         ></iframe>
 
     )
