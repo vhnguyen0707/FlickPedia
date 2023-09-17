@@ -14,7 +14,7 @@ const MediaSlide = ({mediaType, mediaCategory}) => {
         const { response:data, err } = await mediaRequests.getList({
             mediaType,
             mediaCategory,
-            pages: 1
+            page: 1
         })
         if (data) setMedias(data.results);
         if (err) toast.error(err.message);

@@ -40,6 +40,7 @@ const SignUp = ({toggleCurrentForm}) => {
                 resetForm();
                 dispatch(setUser(data));
                 toast.success(`Signed in as ${data.username}`);
+                toggleCurrentForm();
                 dispatch(setAuthModalOpen(false));
             } 
             if (err) setError(err.message)
