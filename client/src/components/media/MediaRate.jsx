@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography, CircularProgress, Stack } from '@mui/material';
+import { Box, Typography, CircularProgress } from '@mui/material';
 
 const MediaRate = ({ value }) => {
   return (

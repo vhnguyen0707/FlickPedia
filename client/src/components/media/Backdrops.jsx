@@ -1,6 +1,5 @@
 import React from 'react';
 import MediaSwiper from './MediaSwiper';
-import uiConfigs from '../../configs/uiConfigs';
 import tmdbConfig from '../../axios/configs/tmdbConfig';
 import { Box } from '@mui/material';
 import { SwiperSlide } from 'swiper/react';

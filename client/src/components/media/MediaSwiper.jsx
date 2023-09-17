@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box } from '@mui/material'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
 // import uiConfigs from '../../configs/uiConfigs';
 // import tmdbConfig from '../../axios/configs/tmdbConfig';

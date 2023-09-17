@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { SwiperSlide } from 'swiper/react';
 import { Box }  from '@mui/material'
-import uiConfigs from '../../configs/uiConfigs';
 import tmdbConfig from '../../axios/configs/tmdbConfig';
 import 'swiper/css';
 import 'swiper/css/navigation';

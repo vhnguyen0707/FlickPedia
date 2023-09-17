@@ -1,5 +1,4 @@
 import { Box, Button, Typography, Stack } from '@mui/material';
-import {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import uiConfigs from '../../configs/uiConfigs';
 import MediaRate from './MediaRate';
