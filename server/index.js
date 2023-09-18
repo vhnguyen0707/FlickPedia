@@ -12,8 +12,8 @@ const MONGODB_URL = process.env.NODE_ENV === 'test'
     ? process.env.TEST_MONGODB_URL
     : process.env.MONGODB_URL
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: false})); //use basic querystring to parse url-encoded form data
 app.use(cookieParser());
 
