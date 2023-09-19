@@ -60,7 +60,7 @@ const Reviews = ({ reviews, mediaType, media }) => {
             setReviewsList(prev => [...prev, data]);
         } 
         if (err){
-            toast.error(err.message);
+            console.log(err.message);
         }
     }
 
@@ -70,7 +70,7 @@ const Reviews = ({ reviews, mediaType, media }) => {
             toast.success('Review removed');
             setReviewsList([...reviewsList.filter(review => review.id !==reviewId)]);
         }
-        if (err) toast.error(err.message);
+        if (err) console.log(err.message);
     }
     return (
         <Stack spacing={4}>

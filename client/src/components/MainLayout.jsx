@@ -29,7 +29,7 @@ const MainLayout = () => {
     const getFavorites = async () => {
       const {response: data, err} = await favoriteRequests.getList();
       if (data) dispatch(setListFavorites(data));
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     }
     if (user) getFavorites();
     else dispatch(setListFavorites([]));

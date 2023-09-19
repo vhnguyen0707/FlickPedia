@@ -1,7 +1,7 @@
 import axios from 'axios';
 import queryString from 'query-string';
 const baseURL = "https://flickpedia-api.vercel.app/api/";
-
+// const baseURL = "http://127.0.0.1:8000/api/";
 //custom settings for axios instance (headers for different requests, encode params)
 const privateClient = axios.create({
     baseURL,

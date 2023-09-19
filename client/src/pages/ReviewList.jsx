@@ -16,7 +16,7 @@ const ReviewList = () => {
     const getMyReviews = async() => {
       const { response: data, err } = await reviewRequests.getList();
       if (data) setReviews(data);
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     }
     getMyReviews();
   }, []);
@@ -27,7 +27,7 @@ const ReviewList = () => {
       setReviews(reviews.filter(review=>review.id !== reviewId));
       toast.success('Review removed');
     }
-    if (err) toast.error(err.message);
+    if (err) console.log(err.message);
   }
   return (
     <>

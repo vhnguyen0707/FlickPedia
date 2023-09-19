@@ -27,7 +27,7 @@ const PersonMediasPagination = ({ personId }) => {
                 setMedias(sortedMedias);
                 setCurrShown([...sortedMedias].slice(0, pageSize)); //1st page
             }
-            if (err) toast.error(err.message); 
+            if (err) console.log(err.message); 
             dispatch(setGlobalLoading(false));
         }
         getMedias();

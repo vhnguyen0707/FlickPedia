@@ -33,7 +33,7 @@ const MediaSearch = () => {
       else setMedias(prev => [...prev, ...data.results]);
     }
 
-    if (err) toast.error(err.message);
+    if (err) console.log(err.message);
     setIsLoading(false)
   }, [currMedia, query, page]);
 

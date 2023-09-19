@@ -28,7 +28,7 @@ const HeroSlider = ({ mediaType, mediaCategory}) => {
             page: 1
         });
         if (data) setMovies(data.results);
-        if (err) toast.error(err.message);
+        if (err) console.log(err.message);
         dispatch(setGlobalLoading(false));
     }
     const getGenres = async() => {
@@ -39,7 +39,7 @@ const HeroSlider = ({ mediaType, mediaCategory}) => {
             getMovies();
         }
         if (err) {
-            toast.error(err.message);
+            console.log(err.message);
             dispatch(setGlobalLoading(false));
         }
     }

@@ -45,7 +45,7 @@ const MediaDetail = () => {
         setIsFavorite(data.isFavorite);
         setGenres(data.genres.slice(0,2).map(genre=>genre.name));
       }
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     }
     getMedia();
   }, [mediaType, mediaId, dispatch]);
@@ -65,7 +65,7 @@ const MediaDetail = () => {
         setIsFavorite(false);
         dispatch(removeFavorite({mediaId}));
       }
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     } else {
       const { response: data, err} = await favoriteRequests.add({
         mediaId,
@@ -78,7 +78,7 @@ const MediaDetail = () => {
         setIsFavorite(true);
         dispatch(addFavorite(data));
       }
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     }
     }
 

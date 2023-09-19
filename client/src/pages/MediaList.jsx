@@ -45,7 +45,7 @@ const MediaList = () => {
         if (currPage !== 1) setMedias(prev => [...prev, ...data.results]);
         else setMedias(data.results);
       }
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
     };
     if (mediaType !== prevMediaType) {
       setCurrPage(1); //reset everything when nav between movies & tv series

@@ -23,7 +23,7 @@ const PersonDetail = () => {
       const {response:data, err} = await personRequests.getDetail({personId});
       // dispatch(setGlobalLoading(false));
       if (data) setPerson(data);
-      if (err) toast.error(err.message);
+      if (err) console.log(err.message);
  
     }
     
